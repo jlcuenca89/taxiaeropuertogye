@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="logo_aero.png">
+   <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self' https://esm.sh 'unsafe-inline';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' https://source.unsplash.com https://cdn.jsdelivr.net data:;
+      font-src 'self' data:;
+      connect-src 'self' https://api.emailjs.com;
+      frame-src 'self' https://www.google.com;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      frame-ancestors 'self';
+      upgrade-insecure-requests;
+    "
+  />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coop. Taxi Aeropuerto Guayaquil</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Somos un  cooperrativa de trasnporte con mas de 35 años sirviendo a nacionales y extramjeros en su movilización desde y hacia todos los rincones del Ecuador.">
+  <meta name="keywords" content="Aeropuerto,aeropuerto, trasnportación, taxi, cooperativa, Guayaquil, Ecuador, traslados, servicio 24/7, flota moderna, seguridad, destinos nacionales, destinos internacionales">
+  
+  <script type="importmap">
+  {
+    "imports": {
+      "jspdf": "https://esm.sh/jspdf@2.5.1",
+      "emailjs-com": "https://esm.sh/emailjs-com@3.2.0"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header id="top" class="nav">
+    <div class="nav-left">
+      <img src="logo_aero.png" alt="Logo" class="logo" />
+    </div>
+
+    <!-- Desktop nav and mobile toggle -->
+    <nav class="nav-right" id="mainNav">
+      <div class="nav-links">
+        <a href="#hero">Inicio</a>
+        <a href="#info">Cooperativa</a>
+        <a href="#timeline">Servicios</a>
+        <a href="#about">Info</a>
+        <a href="#tarifario">Tarifario</a>
+      </div>
+      <button id="bookBtn" class="cta">Haz una reserva</button>
+      <button id="hamburgerBtn" class="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu (hidden on desktop) -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="#hero">Inicio</a>
+      <a href="#info">Cooperativa</a>
+      <a href="#timeline">Servicios</a>
+      <a href="#about">Info</a>
+      <a href="#tarifario">Tarifario</a>
+      <button id="mobileBookBtn" class="cta">Haz una reserva</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN 1: HERO VIDEO -->
+    <section id="hero" class="section section-hero">
+      <!-- El video se configura dinámicamente desde main.js según el dispositivo -->
+      <video id="heroVideo" muted playsinline preload="auto" class="hero-video">
+        Tu navegador no soporta video.
+      </video>
+    </section>
+
+    <!-- SECCIÓN 2: Información cooperativa -->
+    <section id="info" class="section section-info">
+      <div class="container">
+        <h2 class="section-title">Nuestra Cooperativa</h2>
+
+        <!-- Fila 1: imagen izquierda / texto derecha -->
+        <div class="info-grid-row">
+          <div class="info-img">
+            <img src="https://source.unsplash.com/600x400/?taxi,fleet" alt="Flota de taxis" />
+          </div>
+          <div class="info-text">
+            <h3>Flota moderna y segura</h3>
+            <p>
+              Contamos con una flota de unidades modernas, equipadas con GPS y seguimiento en tiempo real
+              para ofrecerte traslados seguros, cómodos y puntuales en todo momento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fila 2: texto izquierda / imagen derecha -->
+        <div class="info-grid-row reverse">
+          <div class="info-text">
+            <h3>Servicio 24/7</h3>
+            <p>
+              Nuestro equipo atiende las 24 horas del día, los 7 días de la semana, con conductores
+              certificados y capacitados para brindar una experiencia confiable y cordial.
+            </p>
+          </div>
+          <div class="info-img">
+            <img src="https://source.unsplash.com/600x400/?taxi,night" alt="Servicio 24 horas" />
+          </div>
+        </div>
+
+        <hr class="info-divider" />
+
+        <!-- Fila de cinco datos con contador -->
+        <div class="info-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="120">0</span>
+            <span class="stat-label">Unidades</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="250000">0</span>
+            <span class="stat-label">Viajes realizados</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="18">0</span>
+            <span class="stat-label">Ciudades</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="160">0</span>
+            <span class="stat-label">Conductores</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="3200">0</span>
+            <span class="stat-label">Viajes internacionales</span>
+          </div>
+        </div>
+
+        <!-- Fila 3: imagen izquierda / texto derecha -->
+        <div class="info-grid-row">
+          <div class="info-img">
+            <img src="https://source.unsplash.com/600x400/?airport,transport" alt="Traslados al aeropuerto" />
+          </div>
+          <div class="info-text">
+            <h3>Especialistas en traslados al aeropuerto</h3>
+            <p>
+              Coordinamos tus llegadas y salidas con anticipación para que tus traslados al aeropuerto
+              sean siempre puntuales, sin estrés y con apoyo en todo momento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fila 4: texto izquierda / imagen derecha -->
+        <div class="info-grid-row reverse">
+          <div class="info-text">
+            <h3>Compromiso con tu seguridad</h3>
+            <p>
+              Todas nuestras unidades cuentan con seguros actualizados, mantenimiento preventivo y
+              protocolos de seguridad para garantizar un viaje confiable para ti y tu familia.
+            </p>
+          </div>
+          <div class="info-img">
+            <img src="https://source.unsplash.com/600x400/?safe,travel" alt="Seguridad en viajes" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: Timeline destinos + imágenes -->
+    <section id="timeline" class="section section-timeline">
+      <div class="container timeline-container">
+        <h2 class="section-title timeline-title">Nuestros destinos en Ecuador</h2>
+        <ul id="timelineList" class="timeline-list" role="tablist" aria-orientation="horizontal">
+          <!-- Items generated by JS -->
+        </ul>
+        <div id="timelineImage" class="timeline-image-wrapper">
+          <img src="https://source.unsplash.com/800x800/?taxi" alt="Servicio" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: Información -->
+    <section id="about" class="section section-about">
+      <div class="container">
+        <h2 class="section-title">Información adicional</h2>
+
+        <div class="about-image-wrapper">
+          <img src="https://source.unsplash.com/1200x600/?taxi,city" alt="Información adicional de la cooperativa" />
+        </div>
+
+        <div class="about-grid-row">
+          <div class="about-card">
+            <h3>Seguros y cobertura</h3>
+            <p>
+              Todas nuestras unidades cuentan con seguros completos que protegen a pasajeros y equipaje,
+              cumpliendo con la normativa vigente nacional e internacional.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Políticas de cancelación</h3>
+            <p>
+              Podrás modificar o cancelar tus reservas con condiciones flexibles, pensadas para adaptarse
+              a cambios de vuelo o de itinerario sin complicaciones.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Servicios especiales</h3>
+            <p>
+              Disponemos de sillas para niños, vehículos adaptados para movilidad reducida y opciones
+              ejecutivas para traslados corporativos o VIP.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: Formulario de reserva -->
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <h2>Reservar Unidad</h2>
+        <form id="reservationForm" novalidate>
+          <div class="form-grid">
+            <label class="full-center-field">Codigo de reserva de vuelo
+              <input name="codigo_vuelo" required />
+            </label>
+            <label class="arrival-label">Hora y fecha de llegada
+              <div class="arrival-datetime">
+                <input type="time" name="hora_llegada" required />
+                <input name="fecha_llegada" placeholder="dd/mm/aaaa" required />
+              </div>
+            </label>
+            <label>Lugar de destino
+              <input name="lugar_destino" required />
+            </label>
+            <label>Número de personas
+              <input type="number" name="num_personas" min="1" required />
+            </label>
+            <label>Número de maletas
+              <input type="number" name="num_maletas" min="0" required />
+            </label>
+            <label>Nombre
+              <input name="nombre" required />
+            </label>
+            <label>Apellido
+              <input name="apellido" required />
+            </label>
+            <label>Cédula / Pasaporte
+              <input name="identificacion" required />
+            </label>
+            <label>Correo electrónico
+              <input type="email" name="email" required />
+            </label>
+            <label>Teléfono de contacto
+              <input name="telefono" required pattern="^[0-9()+ -]{6,}$" />
+            </label>
+            <div class="captcha">
+              <label id="captchaLabel"></label>
+              <input id="captchaInput" required />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="cta">Agendar reserva</button>
+          </div>
+
+          <div id="formMessage" class="form-message" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: Google Map - Ubicación Aeropuerto de Guayaquil -->
+    <section id="map" class="section section-map">
+      <div id="mapContainer" class="map-container">
+        <!-- Google Maps iframe centered on Guayaquil Airport -->
+        <iframe
+          src="https://www.google.com/maps?q=Aeropuerto+José+Joaquín+de+Olmedo+Guayaquil&output=embed"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <a id="whatsBtn" class="whatsapp" href="https://wa.me/593999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
+
+  <!-- Modal Tarifario -->
+  <div id="tarifarioModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-content">
+      <button type="button" id="closeTarifarioBtn" class="modal-close-btn">Cerrar</button>
+      <iframe
+        src="./tarifario.pdf"
+        title="Tarifario"
+        class="modal-pdf"
+        frameborder="0"
+        sandbox="allow-same-origin"
+      ></iframe>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Cooperativa Taxi - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
