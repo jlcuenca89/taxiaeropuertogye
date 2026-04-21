@@ -15,8 +15,8 @@ body{
 }
 .container{max-width:var(--max-width);margin:0 auto;padding:24px}
 main{flex:1}
-.nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:rgb(255 198 0 / 90%);backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid #eee;transition:background .25s ease}
-.nav.scrolled{background:rgb(255 198 0 / 50%)}
+.nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:rgb(255 198 0);backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid #eee;transition:background .25s ease}
+.nav.scrolled{background:rgb(255 255 255 / 74%)}
 .logo{height:65px}
 .nav-right{display:flex;gap:12px;align-items:center;position:relative}
 .nav-right .nav-links{display:flex;gap:12px;align-items:center}
@@ -54,22 +54,27 @@ main{flex:1}
   .nav-right{gap:8px}
   .nav-right a{display:none}
 }
-.section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.section{min-height:90vh;display:flex;align-items:center;justify-content:center;padding:24px}
 .section-hero{padding:0}
 .hero-video{width:100%;height:100vh;object-fit:cover;display:block}
-.section-info,.section-about{background:#fafafa;text-align:left}
+.section-info,.section-about{background:rgb(255 198 0);text-align:left}
 
 /* sección info - layout */
 .section-info .section-title{
   margin:0 0 24px;
-  font: size 36px;
+  font-size: 32px;
   text-align: center;
+  color: rgb(255 198 0);
+  background-color: darkblue;
 }
 
 /* sección about - imagen + grid 3 columnas (25% más grande aprox.) */
 .section-about .section-title{
   margin:0 0 24px;
   font-size:32px; /* ~15% más grande que 28px */
+  text-align: center;
+  background-color: darkblue;
+  color: rgb(255 198 0);
 }
 
 .section-about .about-image-wrapper{
@@ -101,6 +106,7 @@ main{flex:1}
 .section-about .about-card h3{
   margin:0 0 10px;
   font-size:24px; /* ~25% más grande que 20px */
+  color: rgb(255 198 0);
 }
 
 .section-about .about-card p{
@@ -127,7 +133,9 @@ main{flex:1}
 }
 .section-info .info-text h3{
   margin:0 0 8px;
-  font-size:20px;
+  font-size: 24px;
+  color: darkblue;
+  text-align: center;
 }
 .section-info .info-text p{
   margin:0;
@@ -157,7 +165,7 @@ main{flex:1}
   display:block;
   font-size:22px;
   font-weight:700;
-  color:var(--accent);
+  color:darkblue;
 }
 .stat-label{
   display:block;
@@ -209,6 +217,8 @@ main{flex:1}
   padding:6px 14px;
   background:rgba(255,255,255,0.5);
   border-radius:999px;
+  font-size: 32px;
+  color: darkblue;
 }
 .timeline-list{
   list-style:none;
@@ -252,7 +262,7 @@ main{flex:1}
 }
 .section-contact{
   position:relative;
-  background-image:url("https://source.unsplash.com/1600x900/?taxi,airport");
+  background-image:url(../img1-vertical.png);
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -267,8 +277,8 @@ main{flex:1}
 .section-contact h2{
   text-align:center;
   margin-bottom:16px;
-  color:#fff;
-  text-shadow:0 2px 6px rgba(0,0,0,0.5);
+  color:darkblue;
+  font-size: 32px;
 }
 
 .section-contact form{
@@ -329,7 +339,7 @@ input.error{border-color:#c0392b;box-shadow:0 0 0 1px rgba(192,57,43,0.3)}
 .section-map .map-container{width:100%;height:60vh}
 .map-container iframe{width:100%;height:100%;border:0;border-radius:8px}
 .footer{background:#111;color:#fff;padding:16px;text-align:center}
-.whatsapp{position:fixed;right:18px;bottom:18px;background:transparent;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.12);z-index:60}
+.whatsapp{position:fixed;right:18px;bottom:18px;background:rgb(255 255 255 / 65%);border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.12);z-index:60}
 .whatsapp img{width:28px;height:28px;filter:invert(29%) sepia(85%) saturate(601%) hue-rotate(84deg) brightness(96%) contrast(96%)}
 
 /* Modal Tarifario */
